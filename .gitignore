@@ -43,3 +43,13 @@ Thumbs.db
 # Misc
 *.log
 npm-debug.log*
+
+medical-prescription-ocr/
+
+backend/aidoc.db
+backend/dict
+backend/uvicorn
+0.8.4
+tools/meow
+data/datasets/*.png
+package-lock.json
