@@ -20,7 +20,7 @@ EDGE_RATE = "+10%"
 EDGE_PITCH = "+12Hz"
 
 # ─── Google TTS (Hindi) ─────────────────────────
-GOOGLE_API_KEY = "AIzaSyBbxqBGkATTYRBye6JEXNTxbYsUitzfQeI"
+GOOGLE_API_KEY = "YOUR_API_KEY"
 GOOGLE_VOICE = "hi-IN-Standard-B"  # Hindi female
 GOOGLE_RATE = 1
 GOOGLE_PITCH = -1.7
