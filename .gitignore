@@ -1,0 +1,45 @@
+# Model files – do NOT upload
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# LoRA / fine‑tune artefacts
+lora_adapter/
+lora_adapter.zip
+data/finetuned-models/
+
+# llama.cpp – third‑party tool, do NOT upload
+llama.cpp/
+
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node modules and Next.js build
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Environment files (keep secrets out)
+.env
+.env.local
+.env*.local
+frontend/.env.local
+backend/.env
+
+# IDE / OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+npm-debug.log*

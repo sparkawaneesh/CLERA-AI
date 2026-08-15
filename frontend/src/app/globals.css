@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #E1E5EC;
+  color: #1C2536;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-lexend {
+  font-family: var(--font-lexend), system-ui, sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------- Noise texture overlay ---------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Frosted Glass Scrollbar ---------- */
+::-webkit-scrollbar-track {
+  background: rgba(22, 26, 35, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00F2FE;
+  border-radius: 4px;
+}
+
+/* ---------- Primary Cyan Neon Accent ---------- */
+.primary-btn,
+a,
+.active,
+.send-btn,
+button.primary {
+  color: #00F2FE;
+  border-color: #00F2FE;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover,
+a:hover {
+  background: rgba(0, 242, 254, 0.12);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.25);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00F2FE !important;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+/* ---------- Secondary Warm Neon (voice, alerts) ---------- */
+.ai-thinking .pulse,
+.voice-active .aura,
+.alert,
+.favourite-star.active,
+.status-dot.recording {
+  color: #FF416C;
+  border-color: #FF416C;
+  text-shadow: 0 0 8px rgba(255, 65, 108, 0.5);
+}
+
+/* Gradient accent for progress / highlights */
+.highlight,
+.progress-bar {
+  background: linear-gradient(90deg, #00F2FE, #9B51E0);
+}
+
+/* ---------- Glassmorphism gradient border ---------- */
+.glass-border {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.glass-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ---------- Updated User Message Bubble ---------- */
+.glow-border {
+  position: relative;
+  background: rgba(22, 26, 35, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px 16px 0 16px;
+  padding: 16px;
+  z-index: 0;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.2), 0 0 30px rgba(0, 242, 254, 0.08);
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px 17px 0 17px;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(0, 242, 254, 0.35),
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 242, 254, 0.35),
+      rgba(255, 255, 255, 0.04));
+  z-index: -1;
+}
+
+.glow-border::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 15px 15px 0 15px;
+  background: rgba(22, 26, 35, 0.9);
+  z-index: -1;
+}
+
+/* ---------- Updated Input Glow ---------- */
+.input-glow {
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.15), 0 0 30px rgba(0, 242, 254, 0.06);
+  transition: all 0.3s ease;
+}
+
+.input-glow:focus-within {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.35), 0 0 50px rgba(0, 242, 254, 0.18);
+  border-color: rgba(0, 242, 254, 0.4);
+}
+
+/* ---------- Fluid Animated Background (cyan/violet tones) ---------- */
+@keyframes fluidFloat1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(50px, -30px) scale(1.08);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.94);
+  }
+}
+
+@keyframes fluidFloat2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-40px, 20px) scale(1.06);
+  }
+
+  66% {
+    transform: translate(25px, -35px) scale(0.92);
+  }
+}
+
+@keyframes fluidFloat3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, 40px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(-35px, -20px) scale(0.96);
+  }
+}
+
+.fluid-1 {
+  animation: fluidFloat1 22s ease-in-out infinite;
+  background: radial-gradient(circle at 30% 40%, rgba(0, 242, 254, 0.06), rgba(0, 242, 254, 0.02) 40%, transparent 70%);
+}
+
+.fluid-2 {
+  animation: fluidFloat2 26s ease-in-out infinite;
+  background: radial-gradient(circle at 60% 50%, rgba(0, 242, 254, 0.05), rgba(155, 81, 224, 0.03) 45%, transparent 75%);
+}
+
+.fluid-3 {
+  animation: fluidFloat3 24s ease-in-out infinite;
+  background: radial-gradient(circle at 40% 60%, rgba(255, 65, 108, 0.04), rgba(155, 81, 224, 0.02) 50%, transparent 80%);
+}
+
+/* ---------- Fade‑in animation ---------- */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInSlideUp 0.3s ease-out forwards;
+}
+
+/* ---------- Pulse animation for divider and drag-over border ---------- */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ---------- Breathing background for central text ---------- */
+@keyframes breathing {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.animate-breathing {
+  animation: breathing 4s ease-in-out infinite;
+}
+
+/* ---------- Neon scanline animation ---------- */
+@keyframes scanline {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+.scanline-effect {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00F2FE, transparent);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+  animation: scanline 1.5s ease-in-out 1;
+}
+
+/* ---------- Glowing laser right edge on middle panel ---------- */
+.laser-right-edge {
+  position: relative;
+}
+
+.laser-right-edge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent 0%, #00F2FE 20%, #00F2FE 80%, transparent 100%);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  pointer-events: none;
+  z-index: 5;
+}
