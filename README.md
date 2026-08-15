@@ -1,6 +1,8 @@
-# CLERA – Your AI Doctor 
+![Status](https://img.shields.io/badge/status-ongoing-yellow)
+![Status](https://img.shields.io/badge/development-active-brightgreen)
+![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)# CLERA – Your AI Doctor 
 
-AIDOC is a **24/7 AI health companion** that understands **English & Hindi**, cross‑questions like a real doctor, reads lab reports, and remembers your health history.  
+CLERA is a **24/7 AI health companion** that understands **English & Hindi**, cross‑questions like a real doctor, reads lab reports, and remembers your health history.  
 It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 
 ---
@@ -8,7 +10,7 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 ##  Features
 
 ###  Core AI Capabilities
-- **Fine‑tuned medical model** (Llama‑3.1‑8B) trained on 600+ bilingual doctor‑patient conversations
+- **Fine‑tuned medical model**  trained on 600+ bilingual doctor‑patient conversations
 - **Bilingual support** – English and Hindi
 - **Cross‑questioning** – asks follow‑ups before giving advice
 - **Streaming responses** – real‑time text generation
@@ -18,15 +20,14 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 - **3‑panel layout** – Sidebar, Middle Panel, Chat Window
 - **Dark/Light mode** with persistent preference
 - **Voice mode** – hands‑free conversation with Aura visualization
-- **Text‑to‑Speech** (Edge TTS for English, Google TTS for Hindi)
+- **Text‑to‑Speech** Both English and Hindi with Fluency
 - **Speech‑to‑Text** with silence detection
 - **Interrupt handling** – tap to stop AI speaking and start listening
 
 ###  Documents & OCR
 - **Document upload** – images and PDFs
-- **OCR extraction** via OCR.space API
-- **“Send to AIDOC”** – extracted text sent directly to chat
-- **Document viewer** and delete
+- **OCR extraction**
+- **Document viewer** 
 
 ###  Dashboard & Health Tracking
 - **Key vitals widget** (heart rate, BP, weight, sleep, steps, blood sugar)
@@ -38,7 +39,7 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 ###  Profile & Memory
 - **Patient memory** – name, age, medical history, lifestyle, metrics
 - **Chat history** saved locally
-- **Favourites** – star chats for quick access
+
 
 ###  Settings
 - Model selection, language toggle, theme toggle
@@ -69,9 +70,9 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 
 
 ## 🚀 Quick Start
-
+```
 ### 1. Clone the repo
-```bash
+bash
 git clone https://github.com/yourusername/AIDOC.git
 cd AIDOC
 
@@ -90,7 +91,7 @@ npm install
 
 
 4. Download the model
-⚠️NOTE:  The fine‑tuned model is not stored in this repo due to its size.
+NOTE:  The fine‑tuned model is not stored in this repo due to its size.
 Download the merged GGUF file from your‑link‑or‑instructions and place it in data/finetuned-models/.
 
 
@@ -104,13 +105,15 @@ TERMINAL 2:
 Frontend: cd frontend && npm run dev
 
 Open http://localhost:3000
+```
 
 
 🧪 Train Your Own Medical Model (Full Pipeline)
 If you want to train a model on your own data or reproduce the AIDOC model, follow these steps.
-
+```
 1. Prepare your dataset
 Your dataset must be a JSONL file (one JSON object per line) with this format:
+
 
 json
 {
@@ -184,11 +187,12 @@ For advanced users, the repository bundles the necessary conversion scripts from
 convert_hf_to_gguf.py – full HuggingFace model → GGUF
 
 convert_lora_to_gguf.py – LoRA adapter → GGUF
-
+```
+```
 Dependencies:
 bash
 pip install -r tools/llama-cpp-convert/requirements/requirements-convert_lora_to_gguf.txt
-
+```
 
 ⚖️ Disclaimer
 AIDOC is an educational and informational tool. It does not replace a licensed physician.
