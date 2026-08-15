@@ -1,6 +1,8 @@
 ![Status](https://img.shields.io/badge/status-ongoing-yellow)
 ![Status](https://img.shields.io/badge/development-active-brightgreen)
-![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)# CLERA – Your AI Doctor 
+![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen)
+
+CLERA – Your AI Doctor 
 
 CLERA is a **24/7 AI health companion** that understands **English & Hindi**, cross‑questions like a real doctor, reads lab reports, and remembers your health history.  
 It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
