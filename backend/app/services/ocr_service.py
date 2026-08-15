@@ -4,7 +4,7 @@ from pdf2image import convert_from_bytes
 from PIL import Image
 import io
 
-OCR_API_KEY = "K87536925888957"   # ← paste your key
+OCR_API_KEY = "YOUR_API_KEY"   # ← paste your key
 
 class OCRService:
     async def extract_text(self, file_bytes: bytes, filename: str) -> str:
