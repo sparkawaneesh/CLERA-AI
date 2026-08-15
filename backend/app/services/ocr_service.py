@@ -4,6 +4,7 @@ from pdf2image import convert_from_bytes
 from PIL import Image
 import io
 
+# Get your free OCR.space API at https://ocr.space/OCRAPI
 OCR_API_KEY = "YOUR_API_KEY"   # ← paste your key
 
 class OCRService:
