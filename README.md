@@ -22,7 +22,7 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 - **3‑panel layout** – Sidebar, Middle Panel, Chat Window
 - **Dark/Light mode** with persistent preference
 - **Voice mode** – hands‑free conversation with Aura visualization
-- **Text‑to‑Speech** Both English and Hindi with Fluency
+- **Text‑to‑Speech**- both English and Hindi with Fluency
 - **Speech‑to‑Text** with silence detection
 - **Interrupt handling** – tap to stop AI speaking and start listening
 
@@ -75,11 +75,11 @@ It runs **fully offline** on your own machine using a fine‑tuned medical LLM.
 ```
 ### 1. Clone the repo
 bash
-git clone https://github.com/yourusername/AIDOC.git
+git clone https://github.com/sparkawaneesh/CLERA-AI.git
 cd AIDOC
 
 
-2.Install Frontend
+2. Install Frontend
 cd backend
 python -m venv .venv
 .venv\Scripts\activate      # Windows
